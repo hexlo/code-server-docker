@@ -11,8 +11,6 @@ services:
     restart: unless-stopped
     networks:
       - traefik_net
-    ports:
-      - 10081:8080
     volumes:
       - ${PWD}/.config:/home/coder/.config
       - ${PWD}/project:/home/coder/project
