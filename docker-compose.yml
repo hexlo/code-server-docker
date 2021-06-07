@@ -15,8 +15,6 @@ services:
       - ${PWD}/.config:/home/coder/.config
       - ${PWD}/project:/home/coder/project
     user: ${UID}:${GID}  
-    environment:
-      - DOCKER_USER=$USER
     labels:
       traefik.enable: true
       traefik.http.routers.router-code.rule: Host(`code.mindlab.dev`)
