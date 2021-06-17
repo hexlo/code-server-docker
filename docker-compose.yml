@@ -14,7 +14,9 @@ services:
     volumes:
       - ${PWD}/.config:/home/coder/.config
       - ${PWD}/project:/home/coder/project
-    user: ${UID}:${GID}  
+    environment:
+      - UID=1000
+      - GID=1000
     labels:
       traefik.enable: true
       traefik.http.routers.router-code.rule: Host(`code.mindlab.dev`)

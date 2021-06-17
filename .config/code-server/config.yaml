@@ -1,4 +1,4 @@
 bind-addr: 127.0.0.1:8080
 auth: password
-hashed-password: 72bcbf6d090ad243a233bae73b162499c944847e9341f5357372836f3e7db6e3
+hashed-password: ec67c05f58cfe0a8283c6641bf53713bb9e3c24c79e742b959a5857cea69be12
 cert: false
