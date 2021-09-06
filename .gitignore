@@ -1,2 +1,9 @@
 project/*
 !project/.gitkeep
+
+.config/*
+!.config/.gitkeep
+!.config/code-server/config.yaml
+
+.local/*
+!.local/.gitkeep

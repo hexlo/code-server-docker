@@ -14,6 +14,7 @@ services:
     volumes:
       - ${PWD}/.config:/home/coder/.config
       - ${PWD}/project:/home/coder/project
+      - ${PWD}/.local:/home/coder/.local
     environment:
       - UID=1000
       - GID=1000
