@@ -8,13 +8,13 @@ services:
   code-server:
     image: codercom/code-server
     container_name: code-server
-    restart: always
+    restart: unless-stopped
     networks:
       - traefik_net
     volumes:
-      - ${PWD}/.config:/home/coder/.config
-      - ${PWD}/project:/home/coder/project
-      - ${PWD}/.local:/home/coder/.local
+      - ./.config:/home/coder/.config
+      - ./project:/home/coder/project
+      - ./.local:/home/coder/.local
     environment:
       - UID=1000
       - GID=1000
