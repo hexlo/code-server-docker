@@ -12,15 +12,20 @@ services:
     networks:
       - traefik_net
     volumes:
-      - ./.config:/home/coder/.config
-      - ./project:/home/coder/project
-      - ./.local:/home/coder/.local
+ #     - ./.config:/home/coder/.config
+ #     - ./project:/home/coder/project
+ #     - ./.local:/home/coder/.local
+      - ./coder:/home/coder
     environment:
       - UID=1000
       - GID=1000
+    ports:
+      - 8080:8080
     labels:
-      traefik.enable: true
-      traefik.http.routers.router-code.rule: Host(`code.mindlab.dev`)
-      traefik.http.routers.router-code.entrypoints: websecure
-      traefik.http.routers.router-code.middlewares: chain-no-auth-ws@file
-      traefik.http.routers.router-code.tls: true
+#      traefik.enable: true
+#      traefik.http.routers.router-code.rule: Host(`code.mindlab.dev`)
+#      traefik.http.routers.router-code.entrypoints: websecure
+#      traefik.http.routers.router-code.middlewares: chain-no-auth-ws@file
+#      traefik.http.routers.router-code.tls: true
+      com.centurylinklabs.watchtower.enable: true
+
